@@ -1,8 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Logo = (props) => {
   const { logo } = props;
-  return <h1 className="poppins-semibold">{logo}</h1>;
+  return (
+    <Link to="/pages" className="poppins-semibold">
+      {logo}
+    </Link>
+  );
 };
 
 export default Logo;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import NavbarLink from "../../Fragments/NavbarLink";
 
 const Hamburger = () => {
@@ -8,7 +8,7 @@ const Hamburger = () => {
   };
 
   return (
-    <div>
+    <div className="md:hidden">
       <label>
         <div className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center">
           <input

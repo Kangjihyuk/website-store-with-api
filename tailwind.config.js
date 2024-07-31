@@ -11,7 +11,13 @@ export default {
         center: true,
         padding: {
           DEFAULT: "0.500rem",
-          sm: "3rem",
+        },
+        screens: {
+          sm: "600px",
+          md: "728px",
+          lg: "984px",
+          xl: "1240px",
+          "2xl": "1496px",
         },
       },
     },
