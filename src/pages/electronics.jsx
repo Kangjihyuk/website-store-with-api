@@ -8,7 +8,7 @@ const electronics = () => {
     getElectronics((data) => {
       setElectronics(data);
     });
-  });
+  }, []);
 
   return (
     <Fragment>

@@ -8,7 +8,7 @@ const jawalery = () => {
     getMensClothing((data) => {
       setMensClothing(data);
     });
-  });
+  }, []);
 
   return (
     <Fragment>

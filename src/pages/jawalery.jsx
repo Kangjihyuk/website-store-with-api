@@ -8,7 +8,7 @@ const jawalery = () => {
     getJewelery((data) => {
       setJawalery(data);
     });
-  });
+  }, []);
 
   return (
     <Fragment>
