@@ -2,14 +2,22 @@ import { Fragment, useEffect, useState } from "react";
 import { getElectronics } from "../Api/api";
 import CardProduct from "../components/Fragments/CardProduct";
 
+
 const electronics = () => {
-  const [electronics, setElectronics] = useState([]);
+  const [electronics, setElectronics] = useState(() => {
+    const storedElectronics = localStorage.getItem("electronics");
+    return storedElectronics ? JSON.parse(storedElectronics) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("electronics", JSON.stringify(electronics));
+  }, [electronics]);
+
   useEffect(() => {
     getElectronics((data) => {
       setElectronics(data);
     });
   }, []);
-
   return (
     <Fragment>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
